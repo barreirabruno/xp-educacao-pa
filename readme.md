@@ -84,6 +84,8 @@
   Documenta a saída de endpoints da Salic API. Os endpoints documentados são relevantes para alimentar o sistema e gerar recomendação.
 
   **Base_url:** http://api.salic.cultura.gov.br/v1
+
+  **Autenticação e Autorização:** A Salic API não possui nenhum tipo de Autenticação ou Autorização necessária para consumo.
   
   **Swagger:** [Acesse o swagger oficial - SALIC API](http://dados.cultura.gov.br/dataset/incentivos-da-lei-rouanet/resource/2bff8a52-14d5-48db-a970-ce30d0fb851d)
 
