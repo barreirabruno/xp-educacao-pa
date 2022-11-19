@@ -7,6 +7,7 @@
   2. [Dados públicos](#Dados-públicos)
   3. [Entidades - descrição de negócio](#Entidades---descrição-de-negócio)
   4. [Endpoints - SALIC API](#Endpoints---SALIC-API)
+  5. [Modelo de dados únicos](#Modelo-de-dados-únicos)
 
   ## Descrição 
 
