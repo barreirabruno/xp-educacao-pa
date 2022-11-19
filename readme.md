@@ -5,8 +5,8 @@
   # Índice
   1. [Descrição](#Descrição)
   2. [Dados públicos](#Dados-públicos)
-  3. [Entidades - descrição de negócio](#Entidades-descrição-de-negócio)
-  4. [Endpoints - SALIC API](#Endpoints-SALIC-API)
+  3. [Entidades - descrição de negócio](#Entidades---descrição-de-negócio)
+  4. [Endpoints - SALIC API](#Endpoints---SALIC-API)
 
   ## Descrição 
 
