@@ -83,12 +83,13 @@
   ### Projetos - Dados relativos a Projetos
 
   **Endpoint:** /projetos/</br>
+  **Descrição:** Busca projetos dado uma combinação de valores diversos de pesquisa
   **Tipo:** GET</br>
   **Curl:**
   ```
   curl -X GET "http://api.salic.cultura.gov.br/v1/projetos/?limit=5&offset=1&area=1&UF=AM&format=json" -H  "accept: application/json"
   ```
-  **Resposta:**
+  **Model:**
   |Propriedade   | Tipo   | Descrição  |
   |---|---|---|
   | PRONAC  | string ($int64) | Número do projeto no Programa Nacional de Apoio à Cultura  |
@@ -123,3 +124,165 @@
   | democratizacao  | string  | Descreve a maneira como o projeto é democratizado para a sociedade  |
   | sinopse  | string  | Sintetiza, abrevia o que é o projeto em um texto  |
   | resumo  | string  |  Abreviação do projeto |  
+  
+  **Resposta:**
+  ```
+  {
+    "count": 5,
+    "_embedded": {
+      "projetos": [
+        {
+          "etapa": "PRÉ-PRODUÇÃO – 3 meses - Contato com os municípios para firmar as parcerias; - Reuniões com equipes pedagógica, administrativa e artística; - Planejamento das aulas e organização de cronograma de f",
+          "providencia": "PROJETO DILIGENCIADO DURANTE A ANÁLISE DA SOLICITAÇÃO DE READEQUAÇÃO.",
+          "area": "Artes Cênicas",
+          "enquadramento": "Artigo 18",
+          "objetivos": "Objetivo Geral: Ampliar a capacidade de alcance do Liceu de Artes e Ofícios Claudio Santoro por meio do LICEU DIGITAL, para oferecer gratuitamente atividades artísticas formativas. Objetivos Específ",
+          "ficha_tecnica": "EDVAL MACHADO JÚNIOR – Direção Geral Presidente da Agência Amazonense de Desenvolvimento Cultural - AADC, graduado em Comunicação Social e Direito, atuando há mais de 15 anos, tem experiência na área",
+          "situacao": "Diligenciado - Readequação",
+          "outras_fontes": 0,
+          "acessibilidade": "Considerando o Art. 18 da IN 02/2019, destacamos abaixo as medidas que serão tomadas para garantir o acesso das pessoas com Deficiência às Atividades Artísticas Formativas:   Pela transmissão ser on",
+          "sinopse": "O LICEU DIGITAL oferecerá cursos formativos em artes nas áreas de dança, teatro, música/canto para os municípios Silves, Anori, Caapiranga, Manaus, Benjamin Constant, Tefé, Boca do Acre, Coari, Codajás e Alvarães. Cada curso será oferecido por módulo de 03 meses e terá duração de 30 horas, com frequência mínima de 75%. A programação dos cursos está dividida em dois módulos de um trimestre cada, como segue:   Módulo I (3 meses de duração cada curso) Dança: Percepção Corporal Iniciação Teatral I (Módulo I) Iniciação ao Canto I (Módulo I)   Módulo II (3 meses de duração cada curso) Dança Contemporânea I Iniciação Teatral I (Módulo II) Iniciação ao Canto I (Módulo II)   Após a divulgação dos cursos nos municípios, realizaremos as inscrições. Posteriormente às inscrições, serão criados grupos no WhatsApp para cada turma/curso com os alunos matriculados, o instrutor e o monitor/tutor. Será aberta uma sala de aula virtual no Google Classroom, para cada turma/curso, onde os conteúdos, materiais, bibliografias estarão disponibilizadas aos alunos. As aulas serão ministradas via Google Meet, sendo o link disponibilizado no grupo de whatsapp de cada turma.   O instrutor do curso utilizará o Google Meet para aula expositiva, com utilização de slides, vídeos (produzidos para as aulas) e um bate papo com os participantes, assim como perguntas feitas pelo chat e/ou por áudio quando necessário.   Dentro de cada sala virtual, haverá um monitor/tutor a fim de registrar a aula e dar apoio a quaisquer ocorrências. Todas as atividades estarão dispostas no Google Classroom, acompanhadas pelo Google Agenda.   Após o encerramento de cada curso serão enviadas avaliações das atividades via Google Formulário, para avaliação dos alunos. Também será enviada uma avaliação para que os alunos possam avaliar os cursos oferecidos e, assim, auxiliar no planejamento de novos cursos.   Ao final será realizado um relatório com os resultados mensurados do projeto.   Como CONTRAPARTIDA SOCIAL, será realizada palestra para os municípios participantes, com a temática “Os cursos de formação artística do Liceu e perspectivas de futuro”.   MÓDULO I Dança: Percepção Corporal (Módulo I) – (Faixa etária a partir de 13 anos) O curso propõe atividades práticas e teóricas para construção de imagem corporal e estímulo à percepção do corpo e sua relação com o meio, visando o desenvolvimento de habilidades e aspectos inerentes ao movimento dançado. Teatro: Iniciação Teatral I (Faixa etária a partir de 13 anos) O curso de Iniciação Teatral propõe estimular a criatividade para a expressão de ideias por meio do teatro. Busca utilizar-se de jogos teatrais para construir caminhos prazerosos na relação ensino e aprendizagem. Música: iniciação ao Canto I (Faixa etária a partir de 13 anos) O Curso visa estimular e aprimorar o uso da voz cantada com técnicas vocais desenvolvidas para a realidade do estudante, propõe estudo de repertórios, técnica vocal, teoria musical e solfejo para prática musical de apresentações e concertos.   MÓDULO II Dança: Dança Contemporânea I (Faixa etária a partir de 13 anos) O curso propõe o estudo dos elementos que fazem parte do processo de desenvolvimento da dança (tempo, espaço, peso, fluência), a partir de métodos, experimentos e processos de pesquisa e improvisação. Propõe o estudo do corpo/físico, corpo/movimento, corpo/interativo, corpo/espaço. Teatro: Iniciação Teatral I (Módulo II) (Faixa etária a partir de 13 anos) Visa apresentar formas de criação cênica aos alunos que já cursaram o Módulo I, levando em consideração os estudos praticados, através de atividades relacionadas à história e preparação de elementos cênicos, como iluminação, cenografia, sonoplastia, figurino e dramaturgia, pensando no desenvolvimento prático e técnico, desenvolvendo o fazer teatral, criativo e artístico. Música: Iniciação ao Canto I (Módulo II) (Faixa etária a partir de 13 anos) O curso propõe um aprofundamento das questões levantadas no módulo anterior, aprimorando o uso da voz cantada com técnicas vocais desenvolvidas para a realidade do estudante, propõe estudo de repertórios, técnica vocal, teoria musical e solfejo para prática musical de apresentações e concertos.   CONTRAPARTIDAS Palestra “Os cursos de formação artística do Liceu e perspectivas de futuro” – a palestra poderá contribuir com uma reflexão sobre os cursos oferecidos pelo LICEU DIGITAL e os impactos desta formação na vida dos envolvidos e dos municípios participantes.",
+          "nome": "LICEU DE ARTES E OFÍCIOS CLÁUDIO SANTORO - LICEU DIGITAL ",
+          "cgccpf": "13659617000165",
+          "mecanismo": "Mecenato",
+          "_links": {
+            "fornecedores": "http://api.salic.cultura.gov.br/v1/fornecedores/?PRONAC=212616",
+            "self": "http://api.salic.cultura.gov.br/v1/projetos/212616",
+            "incentivadores": "http://api.salic.cultura.gov.br/v1/incentivadores/?PRONAC=212616",
+            "proponente": "http://api.salic.cultura.gov.br/v1/proponentes/68f003ce5b41c0b00565897f01dc98c362fe6ffd2b89a03e70f43d175e69"
+          },
+          "segmento": "Ações de capacitação e treinamento de pessoal",
+          "PRONAC": "212616",
+          "estrategia_execucao": "Devido a transmissão dos cursos serem pelo Google Meet, os alunos matriculados poderão acompanhar de suas próprias residências, desde que tenham internet. Entretanto, as prefeituras dos municípios dis",
+          "valor_aprovado": 559309.52,
+          "justificativa": "O Estado do Amazonas é uma região bastante peculiar comparada ao restante do país. O acesso aos seus municípios é, na sua maioria, por rios, o que contribui para prolongar as distâncias, visto que as",
+          "resumo": "O projeto consiste na expansão das atividades artísticas formativas do LICEU DE ARTES E OFÍCIOS CLAUDIO SANTORO, localizado em Manaus/Amazonas, por meio da ampliação do seu LICEU DIGITAL. A possibilidade de ampliaçãodo LICEU DIGITALirábeneficiar, nesta etapa, outros municípios do Amazonas,por meio de tecnologias adequadas para aulas remotas, na perspectiva de proporcionar gratuitamente atividades artísticas formativas em Dança, Teatro e Música/Canto, para crianças e jovens destas localidades. Como CONTRAPARTIDA SOCIAL o projeto realizará uma palestra, por meio remoto, para as cidades participantes do projeto, com a temática “Os cursos de formação artística do Liceu e perspectivas de futuro”.",
+          "valor_solicitado": 559309.52,
+          "especificacao_tecnica": "Projeto pedagógico completo Com base nas possibilidades de atuação nos municípios, os cursos oferecidos nas áreas de Dança, Teatro e Música/Canto, são do nível Básico e visam o estimulo do fazer artí",
+          "municipio": "Manaus",
+          "data_termino": "2023-02-13",
+          "UF": "AM",
+          "impacto_ambiental": "",
+          "democratizacao": "Todos os cursos e atividades do projeto são gratuitos. Serão oferecidas 900 vagas nos Cursos em dança, teatro, música/canto.   De acordo com o Art. 21 da IN n° 2/2019, serão adotadas as seguintes m",
+          "valor_projeto": 559309.52,
+          "proponente": "AGÊNCIA AMAZONENSE DE DESENVOLVIMENTO CULTURAL - AADC",
+          "ano_projeto": "21",
+          "data_inicio": "2022-02-14",
+          "valor_captado": 0,
+          "valor_proposta": 559309.52
+        },
+        ...
+      ]
+    },
+    "total": 86,
+    "_links": {
+      "self": "http://api.salic.cultura.gov.br/v1/projetos/?limit=5&offset=1&area=1&UF=AM&format=json&",
+      "first": "http://api.salic.cultura.gov.br/v1/projetos/?limit=5&offset=0&area=1&UF=AM&format=json&",
+      "last": "http://api.salic.cultura.gov.br/v1/projetos/?limit=5&offset=85&area=1&UF=AM&format=json&",
+      "next": "http://api.salic.cultura.gov.br/v1/projetos/?limit=5&offset=6&area=1&UF=AM&format=json&"
+    }
+  }
+  ```
+
+  </br>
+  </br>
+
+  **Endpoint:** /incentivadores/</br>
+  **Descrição:** Busca incentivadores dado uma combinação de valores diversos de pesquisa
+  **Tipo:** GET</br>
+  **Curl:**
+  ```
+  curl -X GET "http://api.salic.cultura.gov.br/v1/incentivadores/?limit=10&nome=Ita%C3%BA&tipo_pessoa=juridica&format=json" -H  "accept: application/json"
+  ```
+  **Model:**
+  |Propriedade   | Tipo   | Descrição  |
+  |---|---|---|
+  | nome | string | Nome do incentivador |
+  | responsavel | string | Nome do responsável vínculado a esse incentivador, pode estar vazio |
+  | cgccpf | string ($int64) | Cgc/Cpf do incentivador |
+  | tipo_pessoa | string | Física ou Jurídica |
+  | UF | string | Estado do incentivador no formato EE |
+  | municipio | string | Cidade do incentivador |
+  | total_doado | number ($double) | Valor total doado por esse incentivador em N projetos [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO] |
+
+  **Resposta:**
+  ```
+  {
+    "count": 10,
+    "_embedded": {
+      "incentivadores": [
+        {
+          "nome": "ITAÚ Administradora de Consórcios Ltda,",
+          "cgccpf": "00000776000101",
+          "total_doado": 7168000,
+          "_links": {
+            "doacoes": "http://api.salic.cultura.gov.br/v1/incentivadores/6050fc669e500bf0292b246ec5a162cd46da2e6436e72f72591dab460410/doacoes/",
+            "self": "http://api.salic.cultura.gov.br/v1/incentivadores/6050fc669e500bf0292b246ec5a162cd46da2e6436e72f72591dab460410"
+          },
+          "tipo_pessoa": "juridica",
+          "responsavel": "",
+          "UF": "SP",
+          "municipio": "Poa"
+        },
+        ...
+      ]
+    },
+    "total": 56,
+    "_links": {
+      "self": "http://api.salic.cultura.gov.br/v1/incentivadores/?limit=10&offset=0&nome=Itaú&tipo_pessoa=juridica&format=json&",
+      "first": "http://api.salic.cultura.gov.br/v1/incentivadores/?limit=10&offset=0&nome=Itaú&tipo_pessoa=juridica&format=json&",
+      "last": "http://api.salic.cultura.gov.br/v1/incentivadores/?limit=10&offset=50&nome=Itaú&tipo_pessoa=juridica&format=json&",
+      "next": "http://api.salic.cultura.gov.br/v1/incentivadores/?limit=10&offset=10&nome=Itaú&tipo_pessoa=juridica&format=json&"
+    }
+  }
+  ```
+  
+  </br>
+  </br>
+
+  **Endpoint:** /incentivadores/{incentivador_id}/doacoes</br>
+  **Descrição:** Dado o id de um incentivador, retorna informações relativas a todas as doações por ele feitas
+  **Tipo:** GET</br>
+  **Curl:**
+  ```
+  curl -X GET "http://api.salic.cultura.gov.br/v1/incentivadores/6050fc669e500bf0292b246ec5a162cd46da2e6436e72f72591dab460410/doacoes?limit=10&format=json" -H  "accept: application/json"
+  ```
+  **Model:**
+  |Propriedade   | Tipo   | Descrição  |
+  |---|---|---|
+  | PRONAC | string ($int64) | Número do projeto no Programa Nacional de Apoio à Cultura |
+  | valor | number ($double) | Valor doado para este projeto específico |
+  | data_recibo | string ($date) | Data do recibo do aporte [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO] |
+  | nome_projeto | string | Nome do projeto que recebeu o aporte |
+  | cgccpf | 	string ($int64) | CNPJ ou CPF do incentivador |
+  | nome_doador | string | Nome do incentivador |
+
+  **Resposta:**
+  ```
+  {
+    "count": 10,
+    "_embedded": {
+      "doacoes": [
+        {
+          "data_recibo": "2017-05-09",
+          "cgccpf": "00000776000101",
+          "nome_doador": "ITAÚ Administradora de Consórcios Ltda,",
+          "nome_projeto": "Plano Anual de Atividades - MAM/SP 2017",
+          "_links": {
+            "projeto": "http://api.salic.cultura.gov.br/v1/projetos/163547 ",
+            "incentivador": "http://api.salic.cultura.gov.br/v1/incentivadores/1b5552fe5eb3e4de7cfcd0bcc1bf81b1891aeca32fabf44eaf802181b66a"
+          },
+          "valor": 500000,
+          "PRONAC": "163547 "
+        }
+      ]
+    },
+    "total": 31,
+    "_links": {
+      "self": "http://api.salic.cultura.gov.br/v1/incentivadores/6050fc669e500bf0292b246ec5a162cd46da2e6436e72f72591dab460410/doacoes/?limit=10&offset=0&format=json&",
+      "first": "http://api.salic.cultura.gov.br/v1/incentivadores/6050fc669e500bf0292b246ec5a162cd46da2e6436e72f72591dab460410/doacoes/?limit=10&offset=0&format=json&",
+      "last": "http://api.salic.cultura.gov.br/v1/incentivadores/6050fc669e500bf0292b246ec5a162cd46da2e6436e72f72591dab460410/doacoes/?limit=10&offset=30&format=json&",
+      "next": "http://api.salic.cultura.gov.br/v1/incentivadores/6050fc669e500bf0292b246ec5a162cd46da2e6436e72f72591dab460410/doacoes/?limit=10&offset=10&format=json&"
+    }
+  }
+  ```
