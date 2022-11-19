@@ -74,7 +74,7 @@
 
   ## Endpoints - SALIC API
 
-  Apresenta a descrição do modelo de dados das entidades envolvidas com projetos incentivados na Lei de incentivo à cultura.
+  Documenta a saída de endpoints da Salic API. Os endpoints documentados são relevantes para alimentar o sistema e gerar recomendação.
 
   **Base_url:** http://api.salic.cultura.gov.br/v1
   
