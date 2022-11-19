@@ -72,8 +72,54 @@
   <a href="http://leideincentivoacultura.cultura.gov.br/como-funciona/">Lei de incentivo a cultura - site oficial</a>
   </details>
 
-  ## Entidades - descrição de dados
+  ## Endpoints - SALIC API
 
   Apresenta a descrição do modelo de dados das entidades envolvidas com projetos incentivados na Lei de incentivo à cultura.
 
-  [Documentação da API - fonte primária de dados](http://dados.cultura.gov.br/dataset/incentivos-da-lei-rouanet/resource/2bff8a52-14d5-48db-a970-ce30d0fb851d)
+  **Base_url:** http://api.salic.cultura.gov.br/v1
+  
+  **Swagger:** [Acesse o swagger oficial - SALIC API](http://dados.cultura.gov.br/dataset/incentivos-da-lei-rouanet/resource/2bff8a52-14d5-48db-a970-ce30d0fb851d)
+
+  ### Projetos - Dados relativos a Projetos
+
+  **Endpoint:** /projetos/</br>
+  **Tipo:** GET</br>
+  **Curl:**
+  ```
+  curl -X GET "http://api.salic.cultura.gov.br/v1/projetos/?limit=5&offset=1&area=1&UF=AM&format=json" -H  "accept: application/json"
+  ```
+  **Resposta:**
+  |Propriedade   | Tipo   | Descrição  |
+  |---|---|---|
+  | PRONAC  | string ($int64) | Número do projeto no Programa Nacional de Apoio à Cultura  |
+  | ano_projeto  | string  | Ano no qual o projeto foi apresentado  |
+  | nome  | string  | Nome do projeto  |
+  | cgccpf  | string ($int64)  | CNPJ ou CPF do proponente do projeto  |
+  | proponente  | string  | Quem propõe o projeto  |
+  | segmento  | string  | Código do Segmento do projeto |
+  | area  | string  | Código da Área do projeto  |
+  | UF  | string  | Estado de origem do projeto |
+  | municipio  | string  | Munícipio do projeto  |
+  | data_inicio  | string ($date)  | Data de início no formato AAAA-MM-DD  |
+  | data_termino  | string ($date)  | Data de finalização no formato AAAA-MM-DD  |
+  | situacao  | string  | Apresentou prestação de contas ou Autorizada a captação total dos recursos ou Projeto em execução - Encerrado prazo de captação ou Autorizada a captação total dos recursos ou Diligenciado - Readequação  |
+  | mecanismo  | string  |  |
+  | enquadramento  | string  | Artigo no qual o projeto se enquadra, por exemplo, Artigo 18  |
+  | valor_projeto  | number ($double)  | [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
+  | outras_fontes  | number ($double)  | [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
+  | valor_captado  | number ($double)  | [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
+  | valor_proposta  | number ($double)  | [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
+  | valor_solicitado  | number ($double)  | [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
+  | valor_aprovado  | number ($double)  |  [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
+  | acessibilidade  | string  | Destaca quais medidas de acessibilidade serão adotadas no projeto  |
+  | objetivos  | string  |  Descreve objetivos gerais e específicos do projeto |
+  | justificativa  | string  | Justificativa para a realização do projeto  |
+  | etapa  | string  | Descreve a etapa atual do projeto  |
+  | ficha_tecnica  | string  | Lista os profissionais envolvidos na realização do projeto  |
+  | impacto_ambiental  | string  | Descreve qual o impacto ambiental o projeto atual causa   |
+  | especificacao_tecnica  | string  | Descreve a parte técnica do projeto  |
+  | estrategia_execucao  | string  | Descreve o meios pelo qual o projeto é realizado  |
+  | providencia  | string  | [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
+  | democratizacao  | string  | Descreve a maneira como o projeto é democratizado para a sociedade  |
+  | sinopse  | string  | Sintetiza, abrevia o que é o projeto em um texto  |
+  | resumo  | string  |  Abreviação do projeto |  
