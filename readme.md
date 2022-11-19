@@ -11,7 +11,7 @@
 
   ## Descrição 
 
-  Utiliza dados de projetos incentivados na Lei de Incentivo a Cultura. Focado em atender os profissionais captadores de recursos dos projetos. O captador de recursos busca pelo projeto através das características do projeto ou (caso já aprovado em lei) pelo número PRONAC. A fonte de dados primárias são dados públicos em - http://leideincentivoacultura.cultura.gov.br/ferramentas/
+  Utiliza dados de projetos incentivados na Lei de Incentivo a Cultura. Focado em atender os profissionais captadores de recursos dos projetos. O captador de recursos busca por incentivadores (ou patrocinadores) através das características do projeto ou (caso já aprovado em lei) pelo número PRONAC. A fonte de dados primárias são dados públicos em - http://leideincentivoacultura.cultura.gov.br/ferramentas/
 
   ## Dados públicos
 
