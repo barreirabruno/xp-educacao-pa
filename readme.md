@@ -83,7 +83,7 @@
   ### Projetos - Dados relativos a Projetos
 
   **Endpoint:** /projetos/</br>
-  **Descrição:** Busca projetos dado uma combinação de valores diversos de pesquisa
+  **Descrição:** Busca projetos dado uma combinação de valores diversos de pesquisa</br>
   **Tipo:** GET</br>
   **Curl:**
   ```
@@ -188,7 +188,7 @@
   </br>
 
   **Endpoint:** /incentivadores/</br>
-  **Descrição:** Busca incentivadores dado uma combinação de valores diversos de pesquisa
+  **Descrição:** Busca incentivadores dado uma combinação de valores diversos de pesquisa</br>
   **Tipo:** GET</br>
   **Curl:**
   ```
@@ -241,7 +241,7 @@
   </br>
 
   **Endpoint:** /incentivadores/{incentivador_id}/doacoes</br>
-  **Descrição:** Dado o id de um incentivador, retorna informações relativas a todas as doações por ele feitas
+  **Descrição:** Dado o id de um incentivador, retorna informações relativas a todas as doações por ele feitas</br>
   **Tipo:** GET</br>
   **Curl:**
   ```
