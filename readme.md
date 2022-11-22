@@ -11,7 +11,35 @@
 
   ## Descrição 
 
-  Utiliza dados de projetos incentivados na Lei de Incentivo a Cultura. Focado em atender os profissionais captadores de recursos dos projetos. O captador de recursos busca por incentivadores (ou patrocinadores) através das características do projeto ou (caso já aprovado em lei) pelo número PRONAC. A fonte de dados primárias são dados públicos em - http://leideincentivoacultura.cultura.gov.br/ferramentas/
+  ### Cenário
+
+  Visão geral de todos os passos envolvidos em um projeto incentivado em lei.
+
+  ![Caminho do incentivo - diagrama](./imgs/caminho_do_incentivo.png)
+
+  Trecho retirado da imagem acima - **Após a aprovação do projeto cabe ao proponente encontrar as empresas ou pessoas físicas para patrocinar sua ideia**. A captação de recursos nem sempre é realizada pelo proponente do projeto, isto é, outra pessoa que coloca esforços em conseguir os patrocínios entra em cena, é o captador de recursos, que em nome do proponente negocia com pessoa jurídica e física o recurso em dinheiro para a realização do projeto.
+
+  A imagem abaixo mostra o passo-a-passo que o captador de recursos faz até chegar ao nome de um patrocinador para uma apresentação do projeto até o patrocínio para realização do projeto.
+
+  ![Análise de patrocinadores - diagrama](./imgs/captador-analise-patrocinadores.png)
+
+  - Os dados do portal Salic retornam para o captador de usuários por meio de planilhas eletrônicas
+  - Planilhas com dados granularizados
+  - Captador tem a tarefa de agrupar as planilhas em uma planilha única
+  - Analisa os dados de patrocinadores na planilha única
+  - Elege um patrocinador que (segundo os critérios de análise do captador de recursos) pode interessar-se pelo projeto
+
+  ### Problema
+
+  ![Problema na análise de patrocinadores - diagrama](./imgs/problema-captador-analise-patrocinadores.png)
+
+  - Gasto de 24 horas (ou três dias) para baixar e reagrupar as planilhas eletrônicas de modo que ela fique pronta para uso
+  - Não tem controle de quão atualizado está o dado
+  - Gasto de 8 horas entre análise dos patrocinadores e compartilhamento da análise com o time para realizar o primeiro contato para apresentar o projeto
+  - Não pode compartilhar as análises dos patrocinadores com o time
+  - Total de horas gastas entre agrupamento do dado e análise hoje é de 32 horas
+
+  ### Solução  
 
   ## Dados públicos
 
