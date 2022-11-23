@@ -31,6 +31,8 @@
 
   ### Problema
 
+  Principais problemas encontrados na jornada mapeada do captador de recursos com os dados:
+
   ![Problema na análise de patrocinadores - diagrama](./imgs/problema-captador-analise-patrocinadores.png)
 
   - Gasto de 24 horas (ou três dias) para baixar e reagrupar as planilhas eletrônicas de modo que ela fique pronta para uso
@@ -40,6 +42,36 @@
   - Total de horas gastas entre agrupamento do dado e análise hoje é de 32 horas
 
   ### Solução  
+
+  Desenho de alto nível da solução
+
+  ![Desenho da solução - diagrama](./imgs/solucao-desenho-alto-nivel.png)
+
+  #### Fonte de dados:
+  - Dados brutos, com campos que não serão utilizados para a recomendação inicial
+  - Portal SALIC - [Projetos do Programa Nacional de Apoio à Cultura - Lei Rouanet - SALIC](http://dados.cultura.gov.br/dataset/incentivos-da-lei-rouanet)
+  - Api Rest pública
+  
+  #### ETL:
+  - Apache Airflow, facilita a execução de código para ETL
+  - Requisição para api pública SALIC - Task 1
+  - Transforma resposta da requisição segundo o modelo único de dados - Task 2
+  - Carrega banco dados com as respostas - Task 2
+  - Repete diariamente as três tasks
+
+  #### Banco de dados:
+  - Armazena dados modelados segundo o modelo único
+  - Armazena a proximidade dos projetos com os patrocinadores, executada pelo usuário captador
+  - Serve os dados para a api de produto
+
+  #### API Produto:
+  - Consome o banco de dados com os modelos únicos de dados
+  - Recebe interação do usuário sobre a proximidade do projeto com patrocinador
+  - Server a recomendação de um patrocinador para o usuário captador
+
+  #### Frontend Web:
+  - Interface Web onde usuário relaciona o quão próximo é o projeto com o patrocinador
+  - Mostra para o usuário a recomendação de um patrocinador
 
   ## Dados públicos
 
