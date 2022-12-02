@@ -56,7 +56,7 @@
   - Apache Airflow, facilita a execução de código para ETL
   - Requisição para api pública SALIC - Task 1
   - Transforma resposta da requisição segundo o modelo único de dados - Task 2
-  - Carrega banco dados com as respostas - Task 2
+  - Carrega banco dados com as respostas - Task 3
   - Repete diariamente as três tasks
 
   #### Banco de dados:
