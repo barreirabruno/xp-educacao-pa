@@ -414,7 +414,7 @@
   Instacie um container Docker com uma instância Postgres alimetada pelos dados brutos coletados do portal Salic
 
   ```
-  cd dados_brutos_postgres
+  cd _dados_brutos_postgres
   ```
 
   ```

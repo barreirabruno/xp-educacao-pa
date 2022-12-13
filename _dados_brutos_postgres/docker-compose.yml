@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+    salic_dados_brutos_db:
+        image: postgres
+        restart: always
+        environment:
+          - DATABASE_HOST=127.0.0.1
+          - POSTGRES_USER=postgres
+          - POSTGRES_PASSWORD=docker
+          - POSTGRES_DB=salic_raw_data
+        
+        ports:
+          - "5433:5432"
+        volumes:
+          - ./salic_sponsors.sql:/docker-entrypoint-initdb.d/salic_sponsors.sql
