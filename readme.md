@@ -9,6 +9,7 @@
   4. [Endpoints - SALIC API](#Endpoints---SALIC-API)
   5. [Modelo de dados únicos](#Modelo-de-dados-únicos)
   6. [Sistemas de recomendação - descoberta](./sistema-de-recomendacao.md)
+  7. [Dados brutos](##Dados-brutos)
 
   ## Descrição 
 
@@ -405,3 +406,24 @@
 
   ### Dúvida | Enviar para o Professor orientador | APAGAR APÓS RESPOSTA
   Faz sentido manter uma lista de projetos recentes que esse incentivador aportou na propriedade **projetos_recentes**, penso em salvar os cinco aportes mais recentes desse incentivador nessa lista para fazer a recomendação inicial por valor de aporte.
+
+  ## Dados brutos
+
+  ### Instâcia Docker com os dados
+
+  Instacie um container Docker com uma instância Postgres alimetada pelos dados brutos coletados do portal Salic
+
+  ```
+  cd dados_brutos_postgres
+  ```
+
+  ```
+  docker compose up
+  ```
+
+  Conecte com um cliente de banco de dados de sua preferêcia, usuário e senha do banco estão no arquivo **docker-compose** ou abaixo:
+  ```
+  DATABASE-USER: postgres
+  DATABASE-PASSWORD: docker
+  ```
+
