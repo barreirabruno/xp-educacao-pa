@@ -1,17 +1,16 @@
-CREATE TABLE IF NOT EXISTS sponsor_salic(
-  id SERIAL NOT NULL,
-  id_sponsor_salic VARCHAR(60) NOT NULL,
-  sponsor_name VARCHAR(255) NOT NULL,
-  cgccpf VARCHAR(20) NOT NULL,
-  tipo_pessoa VARCHAR(50) NOT NULL,
-  responsavel VARCHAR(50) NOT NULL,
-  total_doado VARCHAR(50) NOT NULL,
-  uf VARCHAR(50) NOT NULL,
-  municipio VARCHAR(50) NOT NULL,
-  created_at VARCHAR(50) NOT NULL,
-  updated_at VARCHAR(50) NOT NULL,
-  PRIMARY KEY (id)
-  );
+CREATE TABLE IF NOT EXISTS sponsor_salic (
+	id SERIAL PRIMARY key,
+	id_sponsor_salic character varying(60) NOT null,
+	sponsor_name character varying(255) NOT null,
+	cgccpf character varying(22) NOT null,
+	tipo_pessoa character varying(25) NOT null,
+	responsavel character varying(100) NOT null,
+	total_doado character varying(25) NOT null,
+	uf character varying(2) NOT null,
+	municipio character varying(30) NOT null,
+	created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  	updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
 
 INSERT INTO public.sponsor_salic (id_sponsor_salic,sponsor_name,cgccpf,tipo_pessoa,responsavel,total_doado,uf,municipio,created_at,updated_at) VALUES
 	 ('5afec5523308eb0d860f5f568c31bedd7268cb38ea27d861b6327cbdd8ef','Galvani Industria Comércio e Serviço Ltda.','00546997000180','juridica','José Rubens Blasi Carvalho Rosas','2905150.12','SP','Paulina','2022-12-01 11:52:22.086572-03','2022-12-01 11:52:22.086572-03'),
