@@ -4,12 +4,13 @@
 
   # Índice
   1. [Descrição](#Descrição)
-  2. [Dados públicos](#Dados-públicos)
-  3. [Entidades - descrição de negócio](#Entidades---descrição-de-negócio)
-  4. [Endpoints - SALIC API](#Endpoints---SALIC-API)
-  5. [Modelo de dados únicos](#Modelo-de-dados-únicos)
-  6. [Sistemas de recomendação - descoberta](./sistema-de-recomendacao.md)
-  7. [Dados brutos](#Dados-brutos)
+  2. [Arquitetura - prova de conceito](./arquitetura-prova-de-conceito.md)
+  3. [Dados públicos](#Dados-públicos)
+  4. [Entidades - descrição de negócio](#Entidades---descrição-de-negócio)
+  5. [Endpoints - SALIC API](#Endpoints---SALIC-API)
+  6. [Modelo de dados únicos](#Modelo-de-dados-únicos)
+  7. [Sistemas de recomendação - descoberta](./sistema-de-recomendacao.md)
+  8. [Dados brutos](#Dados-brutos)
 
   ## Descrição 
 
