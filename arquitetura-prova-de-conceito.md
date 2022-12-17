@@ -8,7 +8,7 @@
   5. [Design](###-Design)
   5. [Design de código - diagrama](###-Design-de-código---diagrama)
 
-### **Arquitetura**
+### Arquitetura
 
 ### Visão geral
 
