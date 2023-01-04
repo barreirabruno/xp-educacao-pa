@@ -112,6 +112,53 @@ Propõe a implementação com arquitetura limpa (Martin Fowler - Uncle Bob). Div
 
 ### Design de código - diagrama
 Serviço - recommender_service
-**ADICIONAR EXPLICAÇÃO DE LEITURA POSTERIOR**</br>
 [Clique aqui e acesse o repositório da prova de conceito](http://link.com.br)
 ![App na cloud backend](./imgs/design-codigo-aplicacao.png)
+
+- **Domain**
+  - Camada mais interna da aplicação
+  - Não depende de nenhuma outra camada
+  - Define a(s) entidade do sistema:
+    - ProcessedSponsorDocument
+  - Define o(s) contrato(s) de caso de uso/funcionalidade(s) do sistema:
+    - available-sponsor
+    - recommender-service
+    - sponsor-by-id
+    - cosine-similarity-calculator-service
+    - document-to-vector
+
+- **Data**
+  - Depende da camada Domain
+  - Implementa caso(s) de uso/funcionalidade(s) da camada Domain
+  - Available-sponsor-service
+    - Utiliza um http-client da camada de Infra
+  - Document-to-vector-transformer-service
+    - Utiliza a biblioteca Vector-object da camada de infra
+    - Utiliza a biblioteca Natural da camada de infra
+
+- **Infra**
+  - Provê ferramentas (como uso de bibliotecas externas) para a camada Data e Application
+  - Implementa bibliotecas externas:
+    - http
+      - Axios - http client
+      - Express - http server
+    - logger
+      - Pino
+    - natural
+    - vector-object
+    - _prepared_data
+      - Documento JSON com dados de incentivadores retirados do portal SALIC para que a recomendação seja calculada e executada, pode ser melhorado posteriormente passando os dados para um banco de dados e implementando um repositório de acesso a dados
+
+- **Application**
+  - Depende da camada Data
+  - Implementa a classe abstrata Controller
+    - Controller tem o método perform, que será implementado por Controllers específicos
+  - Controllers implementados extendendo de Controller:
+    - available-sponsor-controller
+    - recommender-controller
+    - sponsor-by-id-controller
+
+- **Main**
+  - Depende das camadas Application, Infra, Data e Domain
+  - Cria todas as instâncias necessárias e atende a injeção de dependência que cada classe aprenseta, por exemplo, application services da camada Data devem ser injetados nos Controllers da camada Application
+  - Rotas HTTP utilizam do web server Express e demais instâncias criadas de Controllers
