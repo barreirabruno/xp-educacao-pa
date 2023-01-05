@@ -10,6 +10,14 @@
 
 ### Arquitetura
 
+### Repositórios
+
+Abaixo os repositórios com as provas de conceito para a recomendação de incentivadores similares
+
+[Sponsor recommender service](https://github.com/barreirabruno/recommender-service-poc)</br>
+[Interface sponsor recommender service](https://github.com/barreirabruno/interface-recommender-service-poc)
+
+
 ### Visão geral
 
 Inicialmente, o serviço de recomendação é um monólito, isso é, todas responsabilidades estão concentradas em uma única peça de software.
