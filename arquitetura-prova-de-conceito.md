@@ -12,6 +12,10 @@
 
 ### Repositórios
 
+Video de demonstrção da prova de conceito da recomendação de incentivadores
+
+<video src="https://youtu.be/OngNg06qyI8" controls="controls" style="max-width: 730px;"></video>
+
 Abaixo os repositórios com as provas de conceito para a recomendação de incentivadores similares
 
 [Sponsor recommender service](https://github.com/barreirabruno/recommender-service-poc)</br>
