@@ -16,6 +16,8 @@ Video de demonstrção da prova de conceito da recomendação de incentivadores
 
 https://user-images.githubusercontent.com/16967470/210911708-59a44be9-6da9-45db-b1bb-5970b3238219.mov
 
+[Acessar a interface de recomendação do vídeo](https://billowing-hill-8856.fly.dev/)
+
 Abaixo os repositórios com as provas de conceito para a recomendação de incentivadores similares
 
 [Sponsor recommender service](https://github.com/barreirabruno/recommender-service-poc)</br>
