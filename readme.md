@@ -386,16 +386,6 @@
   | valor_aprovado | number ($double)  | [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO]  |
   | metadata | string  | Resposta na integra vinda da requisição da SALIC Api |
 
-  ### Dúvida | Enviar para o Professor orientador | APAGAR APÓS RESPOSTA
-  Possível recomendar um incentivador para um projeto pelas propriedades de valor de aporte do modelo único?
-  Propriedades relacionadas com valor de aporte no modelo único de projeto:
-  - valor_projeto
-  - outras_fontes
-  - valor_captado
-  - valor_proposta
-  - valor_solicitado
-  - valor_aprovado
-
   ### Incentivador
 
   |Propriedade   | Tipo   | Descrição  |
@@ -404,9 +394,6 @@
   | total_doado |  string | Valor total doado por esse incentivador em N projetos [VALIDAR_COM_CAPTADORA_SIGNIFICADO_DO_CAMPO] |
   | UF | string  | Estado do incentivador no formato EE  |
   | projetos_recentes | Projeto ($list)  | Lista de projetos recentes que esse incentivador aportou  |
-
-  ### Dúvida | Enviar para o Professor orientador | APAGAR APÓS RESPOSTA
-  Faz sentido manter uma lista de projetos recentes que esse incentivador aportou na propriedade **projetos_recentes**, penso em salvar os cinco aportes mais recentes desse incentivador nessa lista para fazer a recomendação inicial por valor de aporte.
 
   ## Dados brutos
 
